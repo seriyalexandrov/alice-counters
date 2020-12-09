@@ -1,0 +1,15 @@
+service: counters
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+package:
+  exclude:
+    - .idea/**
+    - counters.iml
+
+functions:
+  counters:
+    handler: handler.counters
